@@ -22,23 +22,23 @@ read -p 'Aleo address:: ' aleo_address
 
 echo "=================================================="
 echo -e 'Installing dependencies...\n' && sleep 1
-apt-get update > install_tool.log
-apt-get install make clang pkg-config libssl-dev build-essential gcc xz-utils git curl vim tmux ntp jq llvm ufw htop iftop -y > install_tool.log
+apt-get update >> install_tool.log
+apt-get install make clang pkg-config libssl-dev build-essential gcc xz-utils git curl vim tmux ntp jq llvm ufw htop iftop -y >> install_tool.log
 apt-get install linux-headers-$(uname -r)
 
 echo "=================================================="
 echo -e 'Installing cuda...\n' && sleep 1
 apt-key del 7fa2af80
 wget -q -O cuda-keyring_1.0-1_all.deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-keyring_1.0-1_all.deb
-dpkg -i cuda-keyring_1.0-1_all.deb > install_tool.log
+dpkg -i cuda-keyring_1.0-1_all.deb >> install_tool.log
 
 echo "-----------------------"
 echo -e 'Updating repository...\n' && sleep 1
-apt-get update > install_tool.log
+apt-get update >> install_tool.log
 
 echo "-----------------------"
 echo -e 'Install cuda lib ...\n' && sleep 1
-apt-get install cuda -y > install_tool.log
+apt-get install cuda -y >> install_tool.log
 
 echo -e 'Update enviroment ...\n' && sleep 1
 echo "export PATH=/usr/local/cuda-11.8/bin${PATH:+:${PATH}}" >> $HOME/.bashrc
