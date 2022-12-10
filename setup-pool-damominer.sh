@@ -68,6 +68,7 @@ fi
 " > $HOME/aleo-pool-damominer/run_gpu.sh
 
 chmox +x $HOME/aleo-pool-damominer/run_gpu.sh
+chmox +x $HOME/aleo-pool-damominer/damominer
 
 echo "=================================================="
 echo -e 'Setup finished \n' && sleep 1
