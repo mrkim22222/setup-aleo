@@ -44,7 +44,7 @@ POOL_NGHIEPNV_DIR="aleo-pool-nghiepnv"
 
 echo -e 'Clone project ...\n' && sleep 1
 
-#git clone https://github.com/HarukaMa/aleo-prover -b testnet3-new $POOL_NGHIEPNV_DIR >> install_node.log
+git clone https://github.com/HarukaMa/aleo-prover -b testnet3-new $POOL_NGHIEPNV_DIR >> install_node.log
 cd $POOL_NGHIEPNV_DIR
 
 INSTALL_DIR=$BASE_DIR/$POOL_NGHIEPNV_DIR
@@ -52,7 +52,7 @@ INSTALL_DIR=$BASE_DIR/$POOL_NGHIEPNV_DIR
 cd $INSTALL_DIR
 
 echo -e 'Build project ...\n' && sleep 1
-#cargo build --release >> install_node.log
+cargo build --release >> install_node.log
 
 echo -e 'Built DONE!' && sleep 1
 
