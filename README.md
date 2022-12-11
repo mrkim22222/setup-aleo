@@ -8,7 +8,7 @@
 ## 2. Pool NVN
 
 ### 2.1: Install, run via nohup
-wget -q -O setup-pool-nvn.sh https://raw.githubusercontent.com/mrkim22222/setup-aleo/main/setup-pool-nvn.sh && chmod +x setup-pool-nvn.sh && sudo /bin/bash setup-pool-nvn.sh
+```wget -q -O setup-pool-nvn.sh https://raw.githubusercontent.com/mrkim22222/setup-aleo/main/setup-pool-nvn.sh && chmod +x setup-pool-nvn.sh && sudo /bin/bash setup-pool-nvn.sh```
 
 ### 2.2 Kill service: 
 Create script:
