@@ -23,10 +23,19 @@ read -p 'Aleo address: ' aleo_address
 
 echo "=================================================="
 echo -e 'Installing dependencies...\n' && sleep 1
-apt update >> install-node.log
-apt install make clang pkg-config libssl-dev build-essential gcc xz-utils git curl vim tmux ntp jq llvm ufw -y --no-install-recommends >> install-node.log
+apt-get update >> install_node.log
+apt-get install make clang pkg-config libssl-dev build-essential gcc xz-utils git curl vim tmux ntp jq llvm ufw -y --no-install-recommends >> install_node.log
 echo "=================================================="
 
+if ! cargo -V &> /dev/null
+then
+    echo "cargo not found! --> install it"
+	echo -e 'Installing Rust ...\n' && sleep 1
+	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+	source "$HOME/.cargo/env"
+	echo "Install rust done!"
+	cargo -V
+fi
 
 
 if [ $SUDO_USER ]; then my_user_name=$SUDO_USER; else my_user_name=`whoami`; fi
@@ -76,5 +85,3 @@ chown $my_user_name:$my_user_name $BASE_DIR/run_pool_nghiepnv.sh
 chown $my_user_name:$my_user_name $BASE_DIR/install_node.log
 
 echo -e 'Finish!!!' && sleep 1
-
-
