@@ -73,6 +73,7 @@ chmod +x $BASE_DIR/run_pool_nghiepnv.sh
 
 chown -R $my_user_name:$my_user_name $INSTALL_DIR
 chown $my_user_name:$my_user_name $BASE_DIR/run_pool_nghiepnv.sh
+chown $my_user_name:$my_user_name $BASE_DIR/install_node.log
 
 echo -e 'Finish!!!' && sleep 1
 
