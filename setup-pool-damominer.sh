@@ -51,8 +51,9 @@ mkdir $HOME/aleo-pool-damominer
 cd $HOME/aleo-pool-damominer
 
 echo -e 'Downloading tool ...\n'
-wget -q -O damominer_linux_v2.0.0.tar https://github.com/damomine/aleominer/releases/download/damominer_linux_v2.0.0/damominer_linux_v2.0.0.tar
-tar -xf damominer_linux_v2.0.0.tar
+wget -q -O damominer_linux_v2.1.2.tar https://github.com/damomine/aleominer/releases/download/v2.1.2/damominer_linux_v2.1.2.tar
+
+tar -xf damominer_linux_v2.1.2.tar
 echo -e 'Download done!'
 
 echo -e 'Update file: run_gpu.sh ...\n'
